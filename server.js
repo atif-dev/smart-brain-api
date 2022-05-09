@@ -35,7 +35,7 @@ app.use(cors())
 app.use(express.json());
 
 //get users table as array of objects in postman and console
-app.get('/', users.handleUsers(db)); //http://localhost:3000/
+//app.get('/', users.handleUsers(db)); //http://localhost:3000/
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
 app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcrypt, saltRounds)})
 app.get('/profile/:id', profile.handleProfileGet(db));//advance way of handling req, res. See also req, res in profile.js
