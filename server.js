@@ -15,7 +15,7 @@ const users = require('./controllers/users');
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-clean-17378',
     port : 5432,
     user : 'postgres',
     password : 'post',
