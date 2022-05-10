@@ -15,11 +15,10 @@ const users = require('./controllers/users');
 const db = knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-clean-17378',
-    port : 5432,
-    user : 'postgres',
-    password : 'post',
-    database : 'smart-brain'
+    host : process.env.DATABASE_URL,
+    ssl: {
+    rejectUnauthorized: false
+    }
   }
 });
 
