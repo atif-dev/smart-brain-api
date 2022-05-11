@@ -33,6 +33,7 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 
+app.get('/', (req, res) => {res.send('It is working')});
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
 app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcrypt, saltRounds)})
 app.get('/profile/:id', profile.handleProfileGet(db));//advance way of handling req, res. See also req, res in profile.js
